@@ -60,7 +60,7 @@ const Login = () => {
     <div className="container py-5 h-100">
         <div className="row d-flex align-items-center justify-content-center h-100">
         <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-        <h3 className="text-center fs-1"> Login</h3>
+        <h3 className="iteam text-center fs-1"> Login</h3>
         <Form onSubmit={handleLogin}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>

@@ -36,11 +36,15 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto fs-4">
-            <Link className="text-decoration-none" to='/'>Home</Link>
-            <Link  className="text-decoration-none px-md-5 " to='/'>All Toys</Link>
-            
-            <Link className="text-decoration-none" to='/blog' >Blog</Link>
-           
+            <Link className="iteam text-decoration-none text-black" to='/'>Home</Link>
+            <Link  className="iteam text-decoration-none text-black px-md-3 " to='/'>All Toys</Link>
+            {
+            user &&
+           <> <Link className="iteam text-decoration-none text-black pe-md-3" to='/blog' >My Toys</Link>
+           <Link className="iteam text-decoration-none text-black pe-md-3" to='/blog' >Add A Toys</Link></>
+           }
+            <Link className="iteam text-decoration-none text-black" to='/blog' >Blog</Link>
+          
            
           </Nav>
           <Nav>
@@ -54,9 +58,9 @@ const Header = () => {
         :'50px'}} 
         className='rounded-circle mx-3 img-fluid' 
         />
-         <div style={{position:'absolute', left: '76%',transform: 'translateX(-50%)',color: '#fff',padding: '0 10px',top:"20px",right:"10px",cursor: 'pointer'}}>
+         <div style={{position:'absolute', left: '75%',transform: 'translateX(-25%)',color: 'rgb(210, 83, 128)',padding: '0 10px',top:"0px",right:"10px",cursor: 'pointer'}}>
         
-        <span style={{bottom: '80%',left: '100%',opacity: showTooltip ? 1 : 0,color: '#000',padding: '0 15px',fontSize:'1.5rem'}}>{user.displayName}</span>
+        <span style={{bottom: '80%',left: '100%',opacity: showTooltip ? 1 : 0,color: 'rgb(153, 98, 122)',padding: '0 15px',fontSize:'1.5rem'}}>{user.displayName}</span>
       </div>
       </div>
          )}

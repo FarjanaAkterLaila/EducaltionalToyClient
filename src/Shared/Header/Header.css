@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 .Navname{
     font-family: 'Lobster', cursive;
+}
+.iteam{
+    font-family: 'Roboto Slab', serif;
 }

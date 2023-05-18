@@ -71,7 +71,7 @@ const Register = () => {
         <div style={{backgroundImage:`url(${image})`,backgroundSize:"cover"}}>
         <div className='p-5'>
         <Container className='w-25 mx-auto border bg-secondary px-5 pt-5 bg-opacity-75 text-white'>
-        <h3 className='text-body'>Please Register</h3>
+        <h3 className='iteam text-body'>Please Register</h3>
         <Form onSubmit={handleRegister}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Name</Form.Label>
