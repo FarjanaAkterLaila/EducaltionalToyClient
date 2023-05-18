@@ -41,7 +41,7 @@ const Header = () => {
             {
             user &&
            <> <Link className="iteam text-decoration-none text-black pe-md-3" to='/blog' >My Toys</Link>
-           <Link className="iteam text-decoration-none text-black pe-md-3" to='/blog' >Add A Toys</Link></>
+           <Link className="iteam text-decoration-none text-black pe-md-3" to='/addtoy' >Add Toys</Link></>
            }
             <Link className="iteam text-decoration-none text-black" to='/blog' >Blog</Link>
           

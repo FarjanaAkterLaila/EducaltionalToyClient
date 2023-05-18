@@ -1,0 +1,15 @@
+.submit-btn{
+    width: 80%;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(160, 104, 205, 0.726);
+    color: white;
+    font-size:18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    border-radius: 2px;
+}
+.submit-btn:hover{
+    background-color: rgb(208, 79, 225);
+}
