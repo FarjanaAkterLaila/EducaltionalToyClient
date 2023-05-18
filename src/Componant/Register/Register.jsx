@@ -45,7 +45,7 @@ const Register = () => {
                 setError('');
                 event.target.reset();
                 setSuccess('User has been created successfully');
-                navigate(from, { replace: true })
+                 navigate(from, { replace: true })
                  updateUserData(result.user,name,photo)
             })
             .catch(error => {
@@ -66,9 +66,12 @@ const Register = () => {
             setError(error.message)
         })
     }
+    const image ="https://i.ibb.co/8rtmGGD/educational-toys-1-jpg.webp";
     return (
-        <Container className='w-25 mx-auto mt-5 border p-5'>
-        <h3>Please Register</h3>
+        <div style={{backgroundImage:`url(${image})`,backgroundSize:"cover"}}>
+        <div className='p-5'>
+        <Container className='w-25 mx-auto border bg-secondary px-5 pt-5 bg-opacity-75 text-white'>
+        <h3 className='text-body'>Please Register</h3>
         <Form onSubmit={handleRegister}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Name</Form.Label>
@@ -99,11 +102,11 @@ const Register = () => {
                 Register
             </Button>
             <br />
-            <Form.Text className="text-secondary">
-                Already Have an Account? <Link to="/login">Login</Link>
+            <Form.Text className="text-dark mb-5">
+                Already Have an Account? <Link className='text-white' to="/login">Login</Link>
             </Form.Text>
             <br/>
-            <Form.Text className="text-success">
+            <Form.Text className="text-light pt-5">
             {success}
             </Form.Text>
             <Form.Text className="text-danger">
@@ -111,6 +114,8 @@ const Register = () => {
             </Form.Text>
         </Form>
     </Container>
+        </div>
+    </div>
     );
 };
 

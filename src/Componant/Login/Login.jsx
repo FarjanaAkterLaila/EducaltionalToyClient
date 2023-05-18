@@ -1,4 +1,4 @@
- import { getAuth } from "firebase/auth";
+ import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { Button,Form } from "react-bootstrap";
  import {  Link, useLocation, useNavigate } from "react-router-dom";
 import app from "../../Firebase/firebase.config";
@@ -15,7 +15,7 @@ const Login = () => {
     console.log('login page location', location)
     const from = location.state?.from?.pathname || '/'
     const [error, setError] = useState('');
-    // const googleProvider = new GoogleAuthProvider();
+     const googleProvider = new GoogleAuthProvider();
     // const githubProvider = new GithubAuthProvider();
     const [user, setUser] = useState(null);
     const handleLogin = event => {
@@ -35,6 +35,23 @@ const Login = () => {
             .catch(error => {
                 console.log(error);
                 setError('Email or password not found')
+            })
+    }
+    
+    // google
+
+    const handleGoogleSignIn = () => {
+
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
+                 navigate(from, { replace: true })
+                setUser(loggedInUser);
+               
+            })
+            .catch(error => {
+                console.log(error);
             })
     }
     return (
@@ -69,7 +86,7 @@ const Login = () => {
             
         </Form>
         <div className='text-center mt-4'><p >------------------------or----------------------</p>
-        <Button  className='mb-2' variant="outline-primary">  Login with Google</Button>
+        <Button onClick={handleGoogleSignIn}   className='mb-2' variant="outline-primary">  Login with Google</Button>
         </div>
         </div>
            
