@@ -8,7 +8,7 @@ import Swal from 'sweetalert2'
 const Toys = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
-  const url = `http://localhost:5000/post-toy?postedBy=${user?.email}`;
+  const url = `https://edu-ler-toy-server-farjanaakterlaila.vercel.app/post-toy?postedBy=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then(res => res.json())
@@ -24,7 +24,7 @@ const Toys = () => {
       cancelButtonText: 'No, cancel!',
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/post-toy/${id}`, {
+        fetch(`https://edu-ler-toy-server-farjanaakterlaila.vercel.app/post-toy/${id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())

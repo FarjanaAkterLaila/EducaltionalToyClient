@@ -38,7 +38,7 @@ element:<PrivateRoute><Toys></Toys></PrivateRoute>
       {
 path:"/updatetoy/:id",
 element:<UpdateToy></UpdateToy>,
-loader:(({params})=>fetch(`http://localhost:5000/post-toy/${params.id}`))
+loader:(({params})=>fetch(`https://edu-ler-toy-server-farjanaakterlaila.vercel.app/post-toy/${params.id}`))
       }
       ]
     },

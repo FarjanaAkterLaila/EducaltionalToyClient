@@ -8,7 +8,7 @@ const Addtoys = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => {
  
-    fetch("http://localhost:5000/post-toy", {
+    fetch("https://edu-ler-toy-server-farjanaakterlaila.vercel.app/post-toy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
