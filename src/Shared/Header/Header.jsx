@@ -40,7 +40,7 @@ const Header = () => {
             <Link  className="iteam text-decoration-none text-black px-md-3 " to='/'>All Toys</Link>
             {
             user &&
-           <> <Link className="iteam text-decoration-none text-black pe-md-3" to='/blog' >My Toys</Link>
+           <> <Link className="iteam text-decoration-none text-black pe-md-3" to='/myToys' >My Toys</Link>
            <Link className="iteam text-decoration-none text-black pe-md-3" to='/addtoy' >Add Toys</Link></>
            }
             <Link className="iteam text-decoration-none text-black" to='/blog' >Blog</Link>

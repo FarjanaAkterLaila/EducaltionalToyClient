@@ -1,7 +1,10 @@
 import { useForm } from "react-hook-form";
 import './Addtoy.css'
+import { useContext } from "react";
+import { AuthContext } from '../../Provider/AuthProvider';
 const Addtoys = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { user } = useContext(AuthContext);
+    const { register, handleSubmit,formState: { errors } } = useForm();
   const onSubmit = data => {
     fetch("http://localhost:5000/post-toy", {
         method: "POST",
@@ -15,7 +18,7 @@ const Addtoys = () => {
     console.log(data);}
     return (
         <div className=" d-flex justify-content-center
-        align-items-center p-5" style={{height:"100vh"}}>
+        align-items-center p-5">
         <div className="row">
         <div className="col-md-4">
             <img
@@ -32,26 +35,29 @@ const Addtoys = () => {
                 {...register("image")}
                 placeholder="image link"
                 type="url"
-                // defaultValue="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
+               
               />
               <input
                 className="p-2 m-3"
+               
                 {...register("name")}
                 placeholder="name"
-                // defaultValue="Web developer"
+               
               />
               <input
                 className="p-2 m-3"
-                {...register("seller name")}
-                placeholder="seller name"
-                // defaultValue="Web developer"
+               
+                {...register("sellername")}
+               
+                defaultValue={user?.displayName}
               />
     <input
                 className="p-2 m-3"
-                // value={user?.email}
-                {...register("seller email")}
+                 value={user?.email}
+                {...register("postedBy")}
                 placeholder="your email"
-                type="email"
+              type="email"
+                  
               />
                  <select className="p-2 m-3" {...register("category")}>
                 <option value="Engineering Toy">Engineering Toy</option>
@@ -63,34 +69,20 @@ const Addtoys = () => {
                 className="p-2 m-3"
                 {...register("price", { required: true })}
                 placeholder="price"
-                // defaultValue="300tk"
+               
               />
               <input
                 className="p-2 m-3"
                 {...register("rating", { required: true })}
                 placeholder="rating"
-                // defaultValue="4.5"
+                 //defaultValue="4.5"
               />
               <input
                 className="p-2 m-3"
-                {...register("Available quantity", { required: true })}
+                {...register("quantity", { required: true })}
                 placeholder="Available quantity"
                 type="number"
               />
-           
-              {/* <select className="p-2 m-3" {...register("status")}>
-                <option value="remote">Remote</option>
-                <option value="offline">Offline</option>
-              </select> */}
-            
-              {/* <input
-                className="p-2 m-3"
-                {...register("deadline")}
-                placeholder="deadline"
-                type="date"
-              /> */}
-            
-              
               <input
                 className="p-2 m-3"
                 {...register("description")}
@@ -99,13 +91,6 @@ const Addtoys = () => {
               <input className="submit-btn" value="Added Toy" type="submit" />
             </form>
           </div>
-          {/* <div className="col-md-4">
-            <img
-              className="w-100"
-              src="https://i.ibb.co/rthZ75K/pngtree-job-vacancy-with-join-our-team-recruitment-vector-design-png-image-6419066-removebg-preview.png"
-              alt=""
-            />
-          </div> */}
         </div>
       </div>
     );
