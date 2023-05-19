@@ -7,6 +7,7 @@ const Addtoys = () => {
   const { user } = useContext(AuthContext);
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => {
+ 
     fetch("http://localhost:5000/post-toy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -18,7 +19,7 @@ const Addtoys = () => {
         if (result.insertedId) {
           Swal.fire({
             title: 'Success!',
-            text: 'Coffee Added Successfully',
+            text: 'Added Successfully',
             icon: 'success',
             confirmButtonText: 'Cool'
           })
