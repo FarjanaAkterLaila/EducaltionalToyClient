@@ -1,9 +1,19 @@
-import React from 'react';
+
 import { Button, Form, Modal } from 'react-bootstrap';
+import { useForm } from 'react-hook-form';
 
 
 const UpdateToy = (props) => {
+  console.log(props);
+  const {
+    register,
+    handleSubmit,
+   
+    formState: { errors },
+  } = useForm();
+
     const { handleJobUpdate } = props;
+    console.log(handleJobUpdate);
     return (
         
         <Modal  {...props}>
@@ -11,32 +21,83 @@ const UpdateToy = (props) => {
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="name@example.com"
-                autoFocus
+         
+         <form  className="container text-center" onSubmit={handleSubmit(handleJobUpdate)}>
+              {errors.exampleRequired && <span>This field is required</span>}
+              
+              <input
+                className="p-2 m-3"
+               
+                {...register("name")}
+                placeholder="name"
+                defaultValue={props?.toy?.name}
               />
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
-          </Form>
+                <input
+            className="text-input d-none"
+            {...register("_id")}
+            value={props?.toy?._id}
+          />
+
+              <input
+                className="p-2 m-3"
+               
+                {...register("sellername")}
+               
+                defaultValue={props?.toy?.sellername}
+              />
+    <input
+                className="p-2 m-3"
+                 value={props?.toy?.postedBy}
+                {...register("postedBy")}
+                placeholder="your email"
+              type="email"
+                  
+              />
+                 <select className="p-2 m-3" {...register("category")}
+                 defaultValue={props?.toy?.category}
+                 >
+                <option value="Engineering Toy">Engineering Toy</option>
+                <option value="Math Toy">Math Toy</option>
+                <option value="Science Toy">Science Toy</option>
+                <option value="Language Toy">Language Toy</option>
+              </select>
+              <input
+                className="p-2 m-3"
+                {...register("price", { required: true })}
+                placeholder="price"
+                defaultValue={props?.toy?.price}
+              />
+              <input
+                className="p-2 m-3"
+                {...register("rating", { required: true })}
+                placeholder="rating"
+                 //defaultValue="4.5"
+                 defaultValue={props?.toy?.rating}
+              />
+              <input
+                className="p-2 m-3"
+                {...register("quantity", { required: true })}
+                placeholder="Available quantity"
+                type="number"
+                defaultValue={props?.toy?.quantity}
+              />
+              <input
+                className="p-2 m-3"
+                {...register("description")}
+                placeholder="description"
+                defaultValue={props?.toy?.description}
+              />
+                <input className="submit-btn" value="Update Job" type="submit" />
+            </form> 
         </Modal.Body>
-        <Modal.Footer>
+        {/* <Modal.Footer>
           <Button variant="secondary" >
             Close
           </Button>
           <Button variant="primary" >
             Save Changes
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
         //   {/* <form
         //     className="container text-center"

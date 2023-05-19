@@ -4,7 +4,8 @@ import Home from "../Componant/Home/Home";
 import Login from "../Componant/Login/Login";
 import Register from "../Componant/Register/Register";
 import Addtoys from "../Componant/AddToy/Addtoys";
-import MyToys from "../Componant/MyToys/MyToys";
+import Toys from "../Componant/MyToys/Toys";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -30,9 +31,9 @@ const router = createBrowserRouter([
         element:<Addtoys></Addtoys>
       },
       {
-        path: "/myToys",
-        element:<MyToys></MyToys>,
-      },
+path:"/myToy",
+element:<PrivateRoute><Toys></Toys></PrivateRoute>
+      }
       ]
     },
   ]);
