@@ -7,7 +7,7 @@ const Subcategory = () => {
   const [activeTab, setActiveTab] = useState("Science");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/post-toy/${activeTab}`)
+    fetch(`https://edu-ler-toy-server-farjanaakterlaila.vercel.app/post-toy/${activeTab}`)
       .then((res) => res.json())
       .then((result) => {
         setJob(result);
@@ -50,7 +50,7 @@ const Subcategory = () => {
             </div>
           </div>
         </div>
-        <div className="row row-cols-1 row-cols-md-2 g-4 mx-3 mt-5">
+        <div className="row row-cols-1 row-cols-md-2 g-1 mx-5 mt-5">
           {jobs?.map((job) => (
             <Catergorydetails 
             key={job._id}

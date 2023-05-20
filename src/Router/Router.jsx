@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import UpdateToy from "../Componant/UpdateToy/UpdateToy";
 import ToysAll from "../Componant/AllToys/ToysAll";
 import Adetalies from "../Componant/AllToys/Adetalies";
+import BCDetail from "../Componant/Subcatrgory/BCDetail";
 
 
 const router = createBrowserRouter([
@@ -36,7 +37,12 @@ const router = createBrowserRouter([
       {
            path:'/detalies/:id',
            element:<PrivateRoute><Adetalies></Adetalies></PrivateRoute>,
-           loader: ({params}) =>fetch(`http://localhost:5000/alltoy/${params.id}`)
+           loader: ({params}) =>fetch(`https://edu-ler-toy-server-farjanaakterlaila.vercel.app/alltoy/${params.id}`)
+      },
+      {
+           path:'/SubCdetail/:id',
+           element:<PrivateRoute><BCDetail></BCDetail></PrivateRoute>,
+           loader: (({params}) =>fetch(`https://edu-ler-toy-server-farjanaakterlaila.vercel.app/post-toy/${params.id}/${params.id}`))
       },
       {
         path:'/addtoy',

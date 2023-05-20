@@ -1,23 +1,26 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Catergorydetails = ({job}) => {
+  const navigate = useNavigate()
     const { _id, name, sellername, category, price, Availablequantity,image,description ,rating}= job || {};
     return (
 
 <div>
-<div className="col">
+<div className="col-md-10 mx-auto">
     <div className="card">
-      <img src={image} className="card-img-top w-100" style={{height:"400px"}}alt="..."/>
+      <img src={image} className="card-img-top w-100" style={{height:"300px"}}alt="..."/>
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">Price: {price} years</p>
         <p className="card-text">Rating {rating}</p>
         <hr/>
         <div className='d-flex justify-content-between'>
-        {/* <div><Button onClick={()=>navigate(`/Chefspage/${_id}`)}>View Recipes Button <FaArrowRight/></Button>
+         <div><Button onClick={()=>navigate(`/SubCdetail/${_id}`)}>View Recipes Button <FaArrowRight/></Button>
         
-        </div> */}
+        </div> 
           {/* <div><p className='text-primary'><BiLike style={{fontSize:'1.5rem'}} className='mx-3 text-primary'/>{job.likes} </p></div> */}
           
         </div>

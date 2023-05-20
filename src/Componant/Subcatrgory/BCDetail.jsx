@@ -1,11 +1,13 @@
-import { Rating } from "@smastrom/react-rating";
-import { FaRegStar, FaStar } from "react-icons/fa";
-import { useLoaderData } from "react-router-dom";
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
-const Adetalies = () => {
-    const detail = useLoaderData();
-    const { _id, name, sellername, category, price, Availablequantity, image ,description,rating } = detail;
+const BCDetail = () => {
+    const det = useLoaderData();
+    const { _id, name, sellername, category, price, Availablequantity, image ,description,rating } = det;
+    console.log(det._id);
     return (
+        
+    
         <div>
         {/* <h1 className='bg-light py-5' style={{ textAlign: 'center' }}>Chef Detail Page</h1> */}
         <div className='row mt-5'>
@@ -20,7 +22,7 @@ const Adetalies = () => {
                     <p className='fs-4 mx-3 fw-bold'>Description:  <span className='fs-5 fw-normal'>{description}</span></p>
                     <p className='fs-4 mx-3 fw-bold'>Rating:  <span className='fs-5 fw-normal'>{rating}</span></p>
                     <p className='fs-4 mx-3 fw-bold'>Category:  <span className='fs-5 fw-normal'>{category}</span></p>
-                    <p className='fs-4 mx-3 fw-bold'> Price:  <span className='fs-5 fw-normal'>{price} years</span></p>
+                    <p className='fs-4 mx-3 fw-bold'> Price:  <span className='fs-5 fw-normal'>{price}</span></p>
                    </div>
                 </div>
 
@@ -30,7 +32,8 @@ const Adetalies = () => {
           
         </div>
        
+    
     );
 };
 
-export default Adetalies;
+export default BCDetail;

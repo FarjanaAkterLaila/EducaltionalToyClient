@@ -71,10 +71,10 @@ const Addtoys = () => {
 
             />
             <select className="p-2 m-3" {...register("category")}>
-              <option value="Engineering Toy">Engineering Toy</option>
-              <option value="Math Toy">Math Toy</option>
-              <option value="Science Toy">Science Toy</option>
-              <option value="Language Toy">Language Toy</option>
+              <option value="Engineering">Engineering Toy</option>
+              <option value="Math">Math Toy</option>
+              <option value="Science">Science Toy</option>
+              <option value="Language">Language Toy</option>
             </select>
             <input
               className="p-2 m-3"
