@@ -5,7 +5,7 @@ import { useLoaderData } from "react-router-dom";
 
 const Adetalies = () => {
     const detail = useLoaderData();
-    const { _id, name, sellername, category, price, Availablequantity, image, description, rating } = detail;
+    const { _id, name, sellername, category, price, Availablequantity, image, description, selleremail,rating } = detail;
     return (
         <div>
             
@@ -18,6 +18,7 @@ const Adetalies = () => {
 
                         <h5 className="card-title mx-3 mt-4 fs-4 fw-bold">Name:  <span className='fs-3 fw-normal'>{name}</span></h5>
                         <h5 className="card-title mx-3 mt-4 fs-4 fw-bold">Seller Name:  <span className='fs-3 fw-normal'>{sellername}</span></h5>
+                        <h5 className="card-title mx-3 mt-4 fs-4 fw-bold">Seller Name:  <span className='fs-3 fw-normal'>{selleremail}</span></h5>
                         <p className='fs-4 mx-3 fw-bold'>Description:  <span className='fs-5 fw-normal'>{description}</span></p>
                        
                         <p className='fs-4 mx-3 fw-bold'>Category:  <span className='fs-5 fw-normal'>{category}</span></p>
