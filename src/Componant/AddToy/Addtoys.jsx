@@ -3,6 +3,7 @@ import './Addtoy.css'
 import { useContext } from "react";
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet";
 const Addtoys = () => {
   const { user } = useContext(AuthContext);
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -30,6 +31,7 @@ const Addtoys = () => {
   return (
     <div className=" d-flex justify-content-center
         align-items-center p-5">
+          <Helmet><title>EduLerToys/Add Toys</title></Helmet>
       <div className="row">
         <div className="col-md-4">
           <img
@@ -80,12 +82,13 @@ const Addtoys = () => {
               className="p-2 m-3"
               {...register("price", { required: true })}
               placeholder="price"
-
+                  type="number"
             />
             <input
               className="p-2 m-3"
               {...register("rating", { required: true })}
               placeholder="rating"
+              type="number"
             //defaultValue="4.5"
             />
             <input

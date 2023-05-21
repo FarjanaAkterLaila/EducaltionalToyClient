@@ -3,6 +3,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button, Container, Form } from 'react-bootstrap';
 import { updateProfile } from 'firebase/auth';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
@@ -69,6 +70,7 @@ const Register = () => {
     const image ="https://i.ibb.co/8rtmGGD/educational-toys-1-jpg.webp";
     return (
         <div style={{backgroundImage:`url(${image})`,backgroundSize:"cover"}}>
+            <Helmet><title>EduLerToys/Register</title></Helmet>
         <div className='p-5'>
         <Container className='w-25 mx-auto border bg-secondary px-5 pt-5 bg-opacity-75 text-white'>
         <h3 className='iteam text-body'>Please Register</h3>

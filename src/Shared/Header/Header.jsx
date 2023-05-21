@@ -36,8 +36,8 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto fs-4">
-            <Link className="iteam text-decoration-none text-black" to='/'>Home</Link>
-            <Link  className="iteam text-decoration-none text-black px-md-3 " to='/alltoys'>All Toys</Link>
+            <Link className="iteam active text-decoration-none text-black" to='/'>Home</Link>
+            <Link className="iteam text-decoration-none text-black px-md-3 " to='/alltoys'>All Toys</Link>
             {
             user &&
            <> <Link className="iteam text-decoration-none text-black pe-md-3" to='/myToy' >My Toys</Link>

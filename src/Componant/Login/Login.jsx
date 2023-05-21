@@ -4,6 +4,7 @@ import { Button,Form } from "react-bootstrap";
 import app from "../../Firebase/firebase.config";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet";
 // import {  FaGoogle } from 'react-icons/fa';
 
 
@@ -57,6 +58,7 @@ const Login = () => {
     return (
     
     <section className="mh-100  border m-5">
+        <Helmet><title>EduLerToys/Login</title></Helmet>
     <div className="container py-5 h-100">
         <div className="row d-flex align-items-center justify-content-center h-100">
         <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">

@@ -1,5 +1,6 @@
 
 
+import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -35,6 +36,7 @@ const UpdateToy = () => {
 
 
     <div>
+      <Helmet><title>EduLerToys/Upate Toy</title></Helmet>
         <div className="w-100 h-100" style={{backgroundImage:`url(${ima})`,backgroundRepeat: "no-repeat"
   ,backgroundSize:"100% 100%"
   }}>

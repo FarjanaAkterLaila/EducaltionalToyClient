@@ -5,6 +5,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { Table } from "react-bootstrap";
 import ToyRow from "./ToyRow";
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet";
 const Toys = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
@@ -47,6 +48,7 @@ const Toys = () => {
 
   return (
     <div>
+      <Helmet><title>EduLerToys/My Toys</title></Helmet>
       <div className="my-jobs-container">
         <h1 className="iteam text-center p-4 ">ALL My Toys</h1>
         <Table striped bordered hover className="container">

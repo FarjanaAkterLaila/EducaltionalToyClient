@@ -10,12 +10,15 @@ import UpdateToy from "../Componant/UpdateToy/UpdateToy";
 import ToysAll from "../Componant/AllToys/ToysAll";
 import Adetalies from "../Componant/AllToys/Adetalies";
 import BCDetail from "../Componant/Subcatrgory/BCDetail";
+import ErrorPage from "../ErrorPage";
+import Blog from "../Componant/Blog/Blog";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage />,
       children:[
         {
             path:'/',
@@ -35,6 +38,10 @@ const router = createBrowserRouter([
            element:<ToysAll></ToysAll>
       },
       {
+           path:'/blog',
+           element:<Blog></Blog>
+      },
+      {
            path:'/detalies/:id',
            element:<PrivateRoute><Adetalies></Adetalies></PrivateRoute>,
            loader: ({params}) =>fetch(`https://edu-ler-toy-server-farjanaakterlaila.vercel.app/alltoy/${params.id}`)
@@ -42,7 +49,7 @@ const router = createBrowserRouter([
       {
            path:'/SubCdetail/:id',
            element:<PrivateRoute><BCDetail></BCDetail></PrivateRoute>,
-           loader: (({params}) =>fetch(`https://edu-ler-toy-server-farjanaakterlaila.vercel.app/post-toy/${params.id}/${params.id}`))
+           loader: (({params}) =>fetch(`https://edu-ler-toy-server-farjanaakterlaila.vercel.app/toycat/${params.id}/${params.id}`))
       },
       {
         path:'/addtoy',

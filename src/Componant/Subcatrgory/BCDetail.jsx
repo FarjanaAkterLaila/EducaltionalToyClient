@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { useLoaderData } from 'react-router-dom';
 
 const BCDetail = () => {
@@ -9,7 +10,8 @@ const BCDetail = () => {
         
     
         <div>
-        {/* <h1 className='bg-light py-5' style={{ textAlign: 'center' }}>Chef Detail Page</h1> */}
+            <Helmet><title>EduLerToys/Category Detail</title></Helmet>
+       
         <div className='row mt-5'>
 
             <div className='col-sm-8 mx-auto '>

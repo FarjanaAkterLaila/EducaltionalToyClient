@@ -1,4 +1,5 @@
 import { Rating } from "@smastrom/react-rating";
+import { Helmet } from "react-helmet";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 
@@ -9,7 +10,7 @@ const Adetalies = () => {
         <div>
         {/* <h1 className='bg-light py-5' style={{ textAlign: 'center' }}>Chef Detail Page</h1> */}
         <div className='row mt-5'>
-
+        <Helmet><title>EduLerToys/Details</title></Helmet>
             <div className='col-sm-8 mx-auto '>
                 <div className='card border-1'>
                

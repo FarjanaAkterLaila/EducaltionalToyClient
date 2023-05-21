@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import './Subcategory.css'
 import Catergorydetails from './Catergorydetails';
 const Subcategory = () => {
@@ -7,7 +7,7 @@ const Subcategory = () => {
   const [activeTab, setActiveTab] = useState("Science");
 
   useEffect(() => {
-    fetch(`https://edu-ler-toy-server-farjanaakterlaila.vercel.app/post-toy/${activeTab}`)
+    fetch(`https://edu-ler-toy-server-farjanaakterlaila.vercel.app/toycat/${activeTab}`)
       .then((res) => res.json())
       .then((result) => {
         setJob(result);
