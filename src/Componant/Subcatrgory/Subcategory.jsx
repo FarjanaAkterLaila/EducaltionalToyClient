@@ -26,7 +26,7 @@ const Subcategory = () => {
               <div
                 onClick={() => handleTabClick("Science")}
                 className={`tab iteam fs-4 Science ${
-                  activeTab == "Science" ? " bg-danger text-white" : ""
+                  activeTab == "Science" ? " bg-secondary text-white" : ""
                 }`}
               >
                 Science Toys
@@ -34,7 +34,7 @@ const Subcategory = () => {
               <div
                 onClick={() => handleTabClick("Engineering")}
                 className={`tab iteam fs-4 Engineering ${
-                  activeTab == "Engineering" ? " bg-danger text-white" : ""
+                  activeTab == "Engineering" ? " bg-secondary text-white" : ""
                 }`}
               >
                 Engineering toys
@@ -42,7 +42,7 @@ const Subcategory = () => {
               <div
                 onClick={() => handleTabClick("Language")}
                 className={`tab iteam fs-4 Language ${
-                  activeTab == "Language" ? " bg-danger text-white" : ""
+                  activeTab == "Language" ? " bg-secondary text-white" : ""
                 }`}
               >
                Language Toys

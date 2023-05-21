@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Button, Card } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
@@ -15,12 +15,12 @@ const Catergorydetails = ({ job }) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text className="text-muted">Seller: {sellername}</Card.Text>
-          <Card.Text>Price: $ {price} </Card.Text>
+          <Card.Text>Price:  {price} </Card.Text>
           <Card.Text>Rating: {rating}</Card.Text>
-          {/* <Card.Text>{description}</Card.Text> */}
+         
           <div className="text-center">
             <Button variant="primary" onClick={() => navigate(`/SubCdetail/${_id}`)}>
-              View Recipes <FaArrowRight />
+              View Details <FaArrowRight />
             </Button>
           </div>
         </Card.Body>

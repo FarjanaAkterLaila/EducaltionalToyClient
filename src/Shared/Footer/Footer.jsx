@@ -16,10 +16,10 @@ const Footer = () => {
                 </div>
                 <div className="col-md-1 ">
                     <h6 className='text-primary bg-opacity-25'>Explore</h6>
-                    <p><a className="text-decoration-none text-primary bg-opacity-10" href="">Home</a></p>
+                    <p><a className="text-decoration-none text-primary bg-opacity-10" href="/">Home</a></p>
                     <p><a className="text-decoration-none text-primary bg-opacity-10" href="">about</a></p>
                     <p><a className="text-decoration-none text-primary bg-opacity-10" href="">Contact us</a></p>
-                    <p><a className="text-decoration-none text-primary bg-opacity-10" href="">Login</a></p>
+                    <p><a className="text-decoration-none text-primary bg-opacity-10" href="/login">Login</a></p>
                 </div>
                 <div className="col-md-1 ">
                     <h6 className='text-primary bg-opacity-25'>Legal Tream</h6>

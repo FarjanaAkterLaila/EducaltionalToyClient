@@ -58,8 +58,7 @@ const ToysAll = () => {
              services.map(toy => <ARow
                 key={toy._id}
                 toy={toy}
-               // handleDelete={handleDelete}
-              // handleBookingConfirm={handleBookingConfirm}
+            
               ></ARow>
               )
             }

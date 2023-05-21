@@ -4,7 +4,7 @@ import Footer from "../Shared/Footer/Footer";
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Offer from "../Componant/Offer/Offer";
+
 import { Helmet } from "react-helmet";
 
 

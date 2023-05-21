@@ -17,7 +17,7 @@ const Login = () => {
     const from = location.state?.from?.pathname || '/'
     const [error, setError] = useState('');
      const googleProvider = new GoogleAuthProvider();
-    // const githubProvider = new GithubAuthProvider();
+    
     const [user, setUser] = useState(null);
     const handleLogin = event => {
         event.preventDefault();

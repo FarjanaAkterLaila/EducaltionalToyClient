@@ -70,7 +70,7 @@ const Toys = () => {
                 key={toy._id}
                 toy={toy}
                 handleDelete={handleDelete}
-              // handleBookingConfirm={handleBookingConfirm}
+              
               ></ToyRow>
               )
             }

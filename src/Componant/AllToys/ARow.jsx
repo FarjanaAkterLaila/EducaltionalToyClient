@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ARow = ({toy}) => {
-    const { _id, name, sellername, category, price, Availablequantity, image } = toy;
+    const { _id, name, sellername, category, price, quantity, image } = toy;
     return (
         <tr>
       <td>
@@ -16,7 +16,7 @@ const ARow = ({toy}) => {
       <td>{sellername}</td>
       <td>{category}</td>
       <td>{price}</td>
-      <td>{Availablequantity}</td>
+      <td>{quantity}</td>
       <td>
          <Link to={`/detalies/${_id}`}> 
         <Button variant="primary">
@@ -24,9 +24,6 @@ const ARow = ({toy}) => {
         </Button>
          </Link> 
       </td>
-      
-
-        {/* <div className='text-center'><button onClick={() => handleDelete(_id)} className='rounded-circle border border-0'><AiOutlineDelete style={{ fontSize: '2rem', color: "D21312" }} /></button></div> */}
       
     </tr>
     );

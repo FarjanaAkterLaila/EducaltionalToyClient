@@ -5,9 +5,9 @@ const Banner = () => {
     return (
         <div className="">
             <Carousel className="carousel slide bg-primary bg-opacity-10 p-5">
-          
+
                 <Carousel.Item>
-               
+
                     <div className="row">
                         <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
                             <img src="https://i.ibb.co/SK85T51/pexels-mart-production-7334320.jpg" className="d-block w-100 " alt="..." />
@@ -23,8 +23,8 @@ const Banner = () => {
                                 <Button variant="btn btn-outline-info">View</Button>
                             </div>
                         </div>
-                        </div>
-                   
+                    </div>
+
                 </Carousel.Item>
                 <Carousel.Item>
 
@@ -36,7 +36,7 @@ const Banner = () => {
                             <div>
                                 <h1>Counting and Number Recognition Game
                                 </h1>
-                                <p>This interactive game challenges children to count, recognize numbers, and solve simple equations through fun and engaging activities. 
+                                <p>This interactive game challenges children to count, recognize numbers, and solve simple equations through fun and engaging activities.
                                 </p>
                                 <Button variant="btn btn-outline-info">View</Button>
                             </div>
